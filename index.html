@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sufiyan Kureshi | Full Stack Developer Portfolio" />
+  <title>Sufiyan Kureshi | Portfolio</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="fade-in">
+
+<!-- Loader -->
+<div id="loader"></div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo">Sufiyan Rafik Kureshi</div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="services.html">Services</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="toggle-dark-mode" aria-label="Toggle Dark Mode">🌙</button>
+  </div>
+</header>
+
+<main class="site-container">
+
+  <!-- Hero Section -->
+  <section class="hero-split">
+    <div class="hero-text">
+      <h1>Hello, I'm <span class="highlight">Sufiyan Kureshi</span></h1>
+      <p class="subtitle">Full Stack Developer · TY B.Tech</p>
+      <p>I build fast, responsive, and clean digital experiences — front to back.</p>
+      <a href="contact.html" class="button">Let’s Work Together</a>
+    </div>
+    <div class="hero-image">
+      <img src="images/dev-clean.svg" alt="Developer Illustration" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills glass-section">
+    <h2>Tech Stack</h2>
+    <div class="skill-badges">
+      <span class="badge html">HTML5</span>
+      <span class="badge css">CSS3</span>
+      <span class="badge js">JavaScript</span>
+      <span class="badge python">Python</span>
+      <span class="badge cpp">C++</span>
+      <span class="badge mysql">MySQL</span>
+      <span class="badge git">Git</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects-preview glass-section">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>This site itself — handcrafted using clean HTML, CSS, and subtle JS polish.</p>
+      </div>
+      <div class="project-card">
+        <h3>Library API</h3>
+        <p>Backend system for book management using Express.js and MongoDB.</p>
+      </div>
+    </div>
+    <a href="projects.html" class="button">Explore All Projects</a>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="contact-cta glass-section">
+    <div class="cta-accent"></div>
+    <h2>✉️ Let’s Create Something Exceptional</h2>
+    <p>I’m always open to collaborating on projects, ideas, or challenges worth solving.</p>
+    <a href="contact.html" class="button glow-button">Reach Out</a>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer-container">
+  <div class="footer-content">
+    <p>&copy; 2025 Sufiyan Kureshi</p>
+    <div class="footer-icons">
+      <a href="https://github.com/yourusername" target="_blank">
+        <img src="images/github.svg" alt="GitHub" width="24" />
+      </a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <img src="images/linkedin.svg" alt="LinkedIn" width="24" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="backToTop" title="Back to Top">↑</button>
+
+<!-- Scripts -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("loader").style.display = "none";
+    document.body.classList.add("fade-in");
+    if (localStorage.getItem("dark-mode") === "enabled") {
+      document.body.classList.add("dark-mode");
+    }
+  });
+
+  document.querySelector('.toggle-dark-mode').addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("dark-mode", isDark ? "enabled" : "disabled");
+  });
+
+  window.onscroll = () => {
+    document.getElementById("backToTop").style.display =
+      window.scrollY > 200 ? "block" : "none";
+  };
+  document.getElementById("backToTop").onclick = () =>
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+</script>
+
+</body>
+</html>

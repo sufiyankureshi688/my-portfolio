@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sufiyan Kureshi | Certificates" />
+  <title>Certificates | Sufiyan Kureshi</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="fade-in">
+
+<!-- Loader -->
+<div id="loader"></div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo">Sufiyan Rafik Kureshi</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="services.html">Services</a>
+      <a href="certificates.html" class="active">Certificates</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="toggle-dark-mode" aria-label="Toggle Dark Mode">🌙</button>
+  </div>
+</header>
+
+<main class="site-container">
+  <section class="glass-section">
+    <h2>📜 Certificates & Achievements</h2>
+    <p>Here are some of the certifications I’ve earned recently:</p>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Python for Everybody</h3>
+        <p>University of Michigan – Coursera</p>
+      </div>
+      <div class="project-card">
+        <h3>Web Development Bootcamp</h3>
+        <p>Udemy by Angela Yu</p>
+      </div>
+      <div class="project-card">
+        <h3>Internship Certificate</h3>
+        <p>Glitchbusters Technologies Pvt. Ltd.</p>
+      </div>
+      <div class="project-card">
+        <h3>Introduction to HTML & CSS</h3>
+        <p>FreeCodeCamp</p>
+      </div>
+      <div class="project-card">
+        <h3>MySQL Basics</h3>
+        <p>SoloLearn</p>
+      </div>
+      <div class="project-card">
+        <h3>Responsive Web Design</h3>
+        <p>Meta / Coursera</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer-container">
+  <div class="footer-content">
+    <p>&copy; 2025 Sufiyan Kureshi</p>
+    <div class="footer-icons">
+      <a href="https://github.com/yourusername" target="_blank">
+        <img src="images/github.svg" alt="GitHub" width="24" />
+      </a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <img src="images/linkedin.svg" alt="LinkedIn" width="24" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="backToTop" title="Back to Top">↑</button>
+
+<!-- Scripts -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("loader").style.display = "none";
+    document.body.classList.add("fade-in");
+    if (localStorage.getItem("dark-mode") === "enabled") {
+      document.body.classList.add("dark-mode");
+    }
+  });
+
+  document.querySelector('.toggle-dark-mode').addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("dark-mode", isDark ? "enabled" : "disabled");
+  });
+
+  window.onscroll = () => {
+    document.getElementById("backToTop").style.display =
+      window.scrollY > 200 ? "block" : "none";
+  };
+  document.getElementById("backToTop").onclick = () =>
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+</script>
+
+</body>
+</html>

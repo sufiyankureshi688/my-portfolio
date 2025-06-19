@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sufiyan Kureshi | Contact" />
+  <title>Contact | Sufiyan Kureshi</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="fade-in">
+
+<!-- Loader -->
+<div id="loader"></div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo">Sufiyan Rafik Kureshi</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="services.html">Services</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <button class="toggle-dark-mode" aria-label="Toggle Dark Mode">🌙</button>
+  </div>
+</header>
+
+<main class="site-container">
+  <section class="contact-cta glass-section">
+    <div class="cta-accent"></div>
+    <h2>📬 Let’s Connect</h2>
+    <p>Interested in working together, have a question, or just want to say hi?</p>
+    <p>Feel free to reach out via email or check out my GitHub and LinkedIn below.</p>
+    <a href="mailto:sufiyankureshi@email.com" class="button glow-button">Email Me</a>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer-container">
+  <div class="footer-content">
+    <p>&copy; 2025 Sufiyan Kureshi</p>
+    <div class="footer-icons">
+      <a href="https://github.com/yourusername" target="_blank">
+        <img src="images/github.svg" alt="GitHub" width="24" />
+      </a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <img src="images/linkedin.svg" alt="LinkedIn" width="24" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="backToTop" title="Back to Top">↑</button>
+
+<!-- Scripts -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("loader").style.display = "none";
+    document.body.classList.add("fade-in");
+    if (localStorage.getItem("dark-mode") === "enabled") {
+      document.body.classList.add("dark-mode");
+    }
+  });
+
+  document.querySelector('.toggle-dark-mode').addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("dark-mode", isDark ? "enabled" : "disabled");
+  });
+
+  window.onscroll = () => {
+    document.getElementById("backToTop").style.display =
+      window.scrollY > 200 ? "block" : "none";
+  };
+  document.getElementById("backToTop").onclick = () =>
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+</script>
+
+</body>
+</html>

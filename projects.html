@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sufiyan Kureshi | Projects Showcase" />
+  <title>Projects | Sufiyan Kureshi</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="fade-in">
+
+<!-- Loader -->
+<div id="loader"></div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo">Sufiyan Rafik Kureshi</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="services.html">Services</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="toggle-dark-mode" aria-label="Toggle Dark Mode">🌙</button>
+  </div>
+</header>
+
+<main class="site-container">
+
+  <section class="glass-section">
+    <h2>📁 My Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A fully responsive portfolio site built from scratch using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project-card">
+        <h3>Library API</h3>
+        <p>A RESTful API for managing books, built with Node.js, Express, and MongoDB.</p>
+      </div>
+      <div class="project-card">
+        <h3>Attendance App</h3>
+        <p>A simple web app for faculty to mark attendance and store records in Firebase.</p>
+      </div>
+      <div class="project-card">
+        <h3>Weather Dashboard</h3>
+        <p>Shows real-time weather using the OpenWeather API. Built with vanilla JavaScript.</p>
+      </div>
+      <div class="project-card">
+        <h3>Expense Tracker</h3>
+        <p>Tracks your daily expenses with chart summaries and localStorage support.</p>
+      </div>
+      <div class="project-card">
+        <h3>CodeIgniter Web App</h3>
+        <p>A CRUD application made during internship using CodeIgniter PHP framework.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer-container">
+  <div class="footer-content">
+    <p>&copy; 2025 Sufiyan Kureshi</p>
+    <div class="footer-icons">
+      <a href="https://github.com/yourusername" target="_blank">
+        <img src="images/github.svg" alt="GitHub" width="24" />
+      </a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <img src="images/linkedin.svg" alt="LinkedIn" width="24" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="backToTop" title="Back to Top">↑</button>
+
+<!-- Scripts -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("loader").style.display = "none";
+    document.body.classList.add("fade-in");
+    if (localStorage.getItem("dark-mode") === "enabled") {
+      document.body.classList.add("dark-mode");
+    }
+  });
+
+  document.querySelector('.toggle-dark-mode').addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("dark-mode", isDark ? "enabled" : "disabled");
+  });
+
+  window.onscroll = () => {
+    document.getElementById("backToTop").style.display =
+      window.scrollY > 200 ? "block" : "none";
+  };
+  document.getElementById("backToTop").onclick = () =>
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+</script>
+
+</body>
+</html>
