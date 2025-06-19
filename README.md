@@ -4,7 +4,7 @@ This is my personal portfolio website, built from scratch using HTML, CSS, and J
 
 ## 🌐 Live Preview
 
-[Click to Visit the Live Site](https://yourusername.github.io/)
+[Click to Visit the Live Site]([https://yourusername.github.io/](https://sufiyankureshi688.github.io/my-portfolio/))
 
 ## 📁 Features
 
